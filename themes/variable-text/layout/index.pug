@@ -2,3 +2,24 @@ extends containers/base
 
 block content
   p howdy pardner
+  
+  #secuela.typeface
+    input(
+      type="range"
+      step="0.01"
+      data-typeface="secuela"
+      class="wght"
+      id="secuela-wght"
+      name="wght"
+      value="200"
+      min="200"
+      max="900"
+    )
+    .sample(
+      style="font-family: Secuela, sans-serif; font-variation-settings: 'wght' 200; font-size: 40px;"
+      contenteditable="true"
+      autocomplete="off"
+      autocorrect="off"
+      autocapitalize="off"
+      spellcheck="false"
+    ) ABCDEFGHIJKLMNOPQRSTUVWXYZ <br>abcdefghijklmnopqrstuvwxyz 0123456789
