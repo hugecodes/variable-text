@@ -1,9 +1,14 @@
 @import "_foundation/variables";
 @import "_foundation/bootstrap";
 
-
 @font-face {
   src: url('/fonts/Secuela-Regular-VF.woff2');
-  font-family:'Secuela';
+  font-family: 'Secuela';
   font-style: normal;
+}
+
+@font-face {
+  src: url('/fonts/Secuela-Italic-II-VF.woff2');
+  font-family: 'Secuela';
+  font-style: italic;
 }

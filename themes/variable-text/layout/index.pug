@@ -1,25 +1,48 @@
 extends containers/base
 
 block content
-  p howdy pardner
-  
-  #secuela.typeface
-    input(
-      type="range"
-      step="0.01"
-      data-typeface="secuela"
-      class="wght"
-      id="secuela-wght"
-      name="wght"
-      value="200"
-      min="200"
-      max="900"
-    )
-    .sample(
-      style="font-family: Secuela, sans-serif; font-variation-settings: 'wght' 200; font-size: 40px;"
-      contenteditable="true"
-      autocomplete="off"
-      autocorrect="off"
-      autocapitalize="off"
-      spellcheck="false"
-    ) ABCDEFGHIJKLMNOPQRSTUVWXYZ <br>abcdefghijklmnopqrstuvwxyz 0123456789
+  .container
+    .row
+      .col-12.py-5
+        .card
+          .card-header.font-weight-bold Secuela
+          .card-body
+            #secuela.typeface
+              .form-group.m-0
+                .row
+                  .col-12.col-lg-3.mb-4.mb-lg-0
+                    label(for="secuela-wght") Weight
+                    input.form-control-range(
+                      type="range"
+                      step="0.01"
+                      data-typeface="secuela"
+                      class="wght"
+                      id="secuela-wght"
+                      name="wght"
+                      value="200"
+                      min="200"
+                      max="900"
+                    )
+                  .col-12.col-lg-9
+                    .row
+                      .col-12
+                        small Regular
+                        .sample(
+                          style="font-family: Secuela, sans-serif; font-variation-settings: 'wght' 200; font-size: 40px;"
+                          contenteditable="true"
+                          autocomplete="off"
+                          autocorrect="off"
+                          autocapitalize="off"
+                          spellcheck="false"
+                        ) Hello, Bart. I'm weaving on a loom!
+                    .row
+                      .col-12
+                        small Italic
+                        .sample.m-0(
+                          style="font-family: Secuela, sans-serif; font-style: italic; font-variation-settings: 'wght' 200; font-size: 40px;"
+                          contenteditable="true"
+                          autocomplete="off"
+                          autocorrect="off"
+                          autocapitalize="off"
+                          spellcheck="false"
+                        ) Hello, Bart. I'm weaving on a loom!
