@@ -46,3 +46,46 @@ block content
                           autocapitalize="off"
                           spellcheck="false"
                         ) Hello, Bart. I'm weaving on a loom!
+
+      .col-12.py-5
+        .card
+          .card-header.font-weight-bold Rocher Color GX
+          .card-body
+            #rocher-color.typeface
+              .form-group.m-0
+                .row
+                  .col-12.col-lg-3.mb-4.mb-lg-0
+                    label(for="rocher-color-BVEL") Bevel
+                    input.form-control-range(
+                      type="range" 
+                      step="0.01" 
+                      data-typeface="rocher-color" 
+                      id="rocher-color-BVEL" 
+                      name="BVEL" 
+                      value="0" 
+                      min="0" 
+                      max="100"
+                    )
+                    
+                    label(for="rocher-color-SHDW") Shadow
+                    input.form-control-range(
+                      type="range"
+                      step="0.01"
+                      data-typeface="rocher-color"
+                      id="rocher-color-SHDW"
+                      name="SHDW"
+                      value="0"
+                      min="0"
+                      max="100"
+                    )
+                  .col-12.col-lg-9
+                    .row
+                      .col-12
+                        .sample(
+                          style="font-family: 'Rocher Color', 'Adobe Blank'; font-size: 5.5em; font-variation-settings: 'BVEL' 0,'SHDW' 0;"
+                          contenteditable="true"
+                          autocomplete="off"
+                          autocorrect="off"
+                          autocapitalize="off"
+                          spellcheck="false"
+                        ) Hello, Bart. I'm weaving on a loom!
