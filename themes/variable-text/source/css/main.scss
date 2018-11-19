@@ -3,26 +3,18 @@
 
 @font-face {
   src: url('/fonts/Secuela-Regular-VF.woff2');
-  font-family:'Secuela';
+  font-family: 'Secuela';
   font-style: normal;
+}
+
+@font-face {
+  src: url('/fonts/Secuela-Italic-II-VF.woff2');
+  font-family: 'Secuela';
+  font-style: italic;
 }
 
 @font-face {
   src: url('/fonts/RocherColorGX.woff2');
   font-family:'Rocher Color';
   font-style: normal;
-}
-
-.typeface {
-  position: relative;
-  padding: calc(1rem + 2%) 0;
-  border-bottom: 1px solid magenta;
-}
-
-.sample {
-  color: #000;
-  margin: -0.25em 0 -0.25em -2vw;
-  padding: 0.25em 6vw 0.25em 2vw;
-  white-space: nowrap;
-  overflow-x: auto;
 }
