@@ -23,3 +23,35 @@ block content
       autocapitalize="off"
       spellcheck="false"
     ) ABCDEFGHIJKLMNOPQRSTUVWXYZ <br>abcdefghijklmnopqrstuvwxyz 0123456789
+    
+  #rocher-color.typeface
+    label Bevel
+      input(
+        type="range" 
+        step="0.01" 
+        data-typeface="rocher-color" 
+        id="rocher-color-BVEL" 
+        name="BVEL" 
+        value="0" 
+        min="0" 
+        max="100")
+        
+    label Shadow
+      input(
+        type="range"
+        step="0.01"
+        data-typeface="rocher-color"
+        id="rocher-color-SHDW"
+        name="SHDW"
+        value="0"
+        min="0"
+        max="100")
+      
+    .sample(
+      style="font-family: 'Rocher Color', 'Adobe Blank'; font-size: 5.5em; font-variation-settings: 'BVEL' 0,'SHDW' 0;"
+      contenteditable="true"
+      autocomplete="off"
+      autocorrect="off"
+      autocapitalize="off"
+      spellcheck="false"
+    ) ABCDEFGHIJKLMNOPQRSTUVWXYZ <br>abcdefghijklmnopqrstuvwxyz 0123456789
