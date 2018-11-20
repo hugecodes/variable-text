@@ -1,9 +1,9 @@
 extends containers/base
 
 block content
-  .container
+  .container.pb-5
     .row
-      .col-12.py-5
+      .col-12.pt-5
         .card
           .card-header.font-weight-bold Secuela
           .card-body
@@ -47,7 +47,7 @@ block content
                           spellcheck="false"
                         ) Hello, Bart. I'm weaving on a loom!
 
-      .col-12.py-5
+      .col-12.pt-5
         .card
           .card-header.font-weight-bold Rocher Color GX
           .card-body
@@ -56,7 +56,7 @@ block content
                 .row
                   .col-12.col-lg-3.mb-4.mb-lg-0
                     label(for="rocher-color-BVEL") Bevel
-                    input.form-control-range(
+                    input.form-control-range.mb-3(
                       type="range" 
                       step="0.01" 
                       data-typeface="rocher-color" 
@@ -68,7 +68,7 @@ block content
                     )
                     
                     label(for="rocher-color-SHDW") Shadow
-                    input.form-control-range(
+                    input.form-control-range.mb-3(
                       type="range"
                       step="0.01"
                       data-typeface="rocher-color"
@@ -83,6 +83,47 @@ block content
                       .col-12
                         .sample(
                           style="font-family: 'Rocher Color', 'Adobe Blank'; font-size: 5.5em; font-variation-settings: 'BVEL' 0,'SHDW' 0;"
+                          contenteditable="true"
+                          autocomplete="off"
+                          autocorrect="off"
+                          autocapitalize="off"
+                          spellcheck="false"
+                        ) Hello, Bart. I'm weaving on a loom!
+      .col-12.pt-5
+        .card
+          .card-header.font-weight-bold Grade GX
+          .card-body
+            #grade.typeface
+              .form-group.m-0
+                .row
+                  .col-12.col-lg-3.mb-4.mb-lg-0
+                    label(for="grade-wght") Grade
+                    input.form-control-range.mb-3(
+                      type="range" 
+                      step="0.01" 
+                      data-typeface="grade" 
+                      id="grade-wght" 
+                      name="wght" 
+                      value="80" 
+                      min="80" 
+                      max="150"
+                    )
+                    label(for="grade-wdth") Width
+                    input.form-control-range.mb-3(
+                      type="range" 
+                      step="0.01" 
+                      data-typeface="grade" 
+                      id="grade-wdth" 
+                      name="wdth" 
+                      value="90" 
+                      min="90" 
+                      max="110"
+                    )
+                  .col-12.col-lg-9
+                    .row
+                      .col-12
+                        .sample(
+                          style="font-family: 'GradeGX'; font-size: 5.5em; font-variation-settings: 'wght' 90,'wdth' 0;"
                           contenteditable="true"
                           autocomplete="off"
                           autocorrect="off"
