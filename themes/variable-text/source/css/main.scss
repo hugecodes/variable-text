@@ -24,3 +24,9 @@
   font-family:'GradeGX';
   font-style: normal;
 }
+
+.sample {
+  transition-property: 'font-variation-settings';
+  transition-duration: 100ms;
+  transition-timing-function: ease;
+}
