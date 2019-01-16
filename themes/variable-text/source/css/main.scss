@@ -24,3 +24,18 @@
   font-family:'GradeGX';
   font-style: normal;
 }
+
+.form {
+  &-group {
+    position: relative;
+    height: 100%;
+  }
+
+  &-control-container {
+    opacity: 0.2;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+  }
+}
