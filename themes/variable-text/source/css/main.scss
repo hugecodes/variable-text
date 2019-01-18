@@ -24,11 +24,19 @@
   font-family:'GradeGX';
   font-style: normal;
 }
+body {
+  background-color: #000;
+}
+
+p {
+  font-size: $type-size;
+}
 
 .form {
   &-group {
     position: relative;
     height: 100%;
+    padding-top: 200px;
   }
 
   &-control-container {
@@ -38,4 +46,16 @@
     left: 0;
     width: 200px;
   }
+}
+
+.oblique {
+  font-style: oblique;
+}
+
+.grey {
+  color: #858990;
+}
+
+.white {
+  color: #ffffff;
 }
