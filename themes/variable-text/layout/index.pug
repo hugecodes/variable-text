@@ -2,7 +2,7 @@ extends containers/base
 
 block content
   #grade.typeface
-    .form-group.m-0
+    .form-group.pb-3
       .form-control-container
         label(for="grade-wght") Grade
         input.form-control-range.mb-3(
@@ -26,6 +26,20 @@ block content
           min="90" 
           max="110"
         )
+      .container
+        .row
+          .col-12
+            .sample(
+              autocomplete="off"
+              autocorrect="off"
+              autocapitalize="off"
+              spellcheck="false"
+            ) 
+              span.grey.oblique Meeting —<br>
+              span.white SK-II review in 5 mins.<br>In Ciao.
+              
+  #grade2
+    .form-group.m-0
       .container
         .row
           .col-12
