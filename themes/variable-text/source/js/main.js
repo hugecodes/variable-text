@@ -76,7 +76,7 @@
 
           // console.log('font width', fontWidth, 'font weight', fontWeight, rangePercentage);
           // console.log(kf.filter(d), d);
-          console.table({filteredData, lastData, diff});
+          // console.table({filteredData, lastData, diff});
         }
       });
 
