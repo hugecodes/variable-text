@@ -31,14 +31,21 @@ body {
 .sample {
   font-family: 'GradeGX';
   font-size: 11.2em;
+  line-height: 1.4em;
   font-variation-settings: 'wght' 90,'wdth' 0;
-  line-height: 1.4em
+  transition-property: 'font-variation-settings';
+  transition-duration: 800ms;
+  transition-timing-function: ease;
 }
 
 .form {
   &-group {
     position: relative;
-    padding-top: 200px;
+    height: 100vh;
+
+    .container {
+      padding-top: 200px;
+    }
   }
 
   &-control-container {
