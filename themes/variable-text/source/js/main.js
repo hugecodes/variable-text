@@ -1,4 +1,11 @@
 (function() {
+  const puckBtn = document.getElementById('my-button');
+  const gradeFont = $('#grade .sample');
+  const readingArr = [];
+  const transitionDurationSlider = document.querySelector('#grade-transition-duration');
+  const kf = new KalmanFilter();
+  var connection;
+
   function axisSlidersToSamples(sliders, samples) {
     var inputs = document.querySelectorAll(sliders);
     var outputs = document.querySelectorAll(samples);
@@ -33,20 +40,16 @@
     li.className += ' loaded';
   });
 
-  const puckBtn = document.getElementById('my-button');
-  const gradeFont = $('#grade .sample');
-
-  // // Called when we get a line of data - updates the light color
-  // function onLine(v) {
-  //   console.log("Received: "+JSON.stringify(v));
-  // }
-  var connection;
-
+  transitionDurationSlider.addEventListener('change', function() {
+    console.log(document.querySelector('#grade .sample').style);
+    document.querySelector('#grade .sample').style.trasitionDuration = transitionDurationSlider.value;
+  })
   puckBtn.addEventListener("click", function() {
     if (connection) {
       connection.close();
       connection = undefined;
     }
+
     Puck.connect(function(c) {
       if (!c) {
         alert("Couldn't connect!");
@@ -55,15 +58,28 @@
       connection = c;
 
       connection.on("data", function(d) {
-        let fontWeight = Math.round(((Math.abs(d) - 30) / 55) * 70 + 80);
-        let fontWidth = Math.round(((Math.abs(d) - 30) / 55) * 30 + 90);
+        d = parseInt(d);
 
-        if (!isNaN(fontWeight) || !isNaN(fontWidth)) {
-          gradeFont.css('font-variation-settings', '"wght" ' + fontWeight + ', "wdth" ' + fontWidth);
-          console.log('font weight: ' + fontWeight, 'font width ' + fontWidth);
+        if (!isNaN(d)) {
+          let filteredData = Math.abs(kf.filter(d));
+          let lastData = readingArr[readingArr.length - 1] || 0;
+          let diff = Math.round(Math.abs(filteredData - lastData));
+          let threashold = 3;
+          let rangePercentage = Math.abs(((filteredData - 170) / 45) -1);
+          let fontWeight = (150 - 80) * rangePercentage + 80; // min weight 80, max 150
+          let fontWidth = (110 - 90) * rangePercentage + 90; // min width 90, max 110
+
+          if (diff > threashold) {
+            readingArr.push(filteredData);
+            gradeFont.css('font-variation-settings', '"wght" ' + fontWeight + ', "wdth" ' + fontWidth);
+          }
+
+          // console.log('font width', fontWidth, 'font weight', fontWeight, rangePercentage);
+          // console.log(kf.filter(d), d);
+          console.table({filteredData, lastData, diff});
         }
-
       });
+
       // First, reset Puck.js
       connection.write("reset();\n", function() {
         // Wait for it to reset itself
@@ -75,10 +91,10 @@
             setInterval(function(){
               NRF.setRSSIHandler(function(rssi){
                 Bluetooth.println(rssi);
-              },1500);
+              },1000);
             });\n`,
           function() { console.log("Ready..."); });
-        }, 1500);
+        }, 1000);
       });
     });
   });
