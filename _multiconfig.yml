@@ -6,8 +6,8 @@ author: null
 language:
   - en
 timezone: null
-url: 'https://github.hugeinc.com'
-root: /pages/hugecodes/variable-text/
+url: 'https://github.hugecodes.com'
+root: /variable-text/
 permalink: ':year/:month/:day/:title/'
 permalink_defaults: null
 source_dir: source
