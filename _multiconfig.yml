@@ -7,7 +7,7 @@ language:
   - en
 timezone: null
 url: 'https://github.hugeinc.com'
-root: /pages/myassa/PrefrontalCortexApp/
+root: /pages/hugecodes/variable-text/
 permalink: ':year/:month/:day/:title/'
 permalink_defaults: null
 source_dir: source
