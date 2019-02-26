@@ -3867,22 +3867,22 @@ textarea.form-control {
   border-top-right-radius: 0; }
 
 @font-face {
-  src: url("/fonts/Secuela-Regular-VF.woff2");
+  src: url("/variable-text/fonts/Secuela-Regular-VF.woff2");
   font-family: 'Secuela';
   font-style: normal; }
 
 @font-face {
-  src: url("/fonts/Secuela-Italic-II-VF.woff2");
+  src: url("/variable-text/fonts/Secuela-Italic-II-VF.woff2");
   font-family: 'Secuela';
   font-style: italic; }
 
 @font-face {
-  src: url("/fonts/RocherColorGX.woff2");
+  src: url("/variable-text/fonts/RocherColorGX.woff2");
   font-family: 'Rocher Color';
   font-style: normal; }
 
 @font-face {
-  src: url("/fonts/GradeGX4-GX-fixed-axis-name.woff2");
+  src: url("/variable-text/fonts/GradeGX4-GX-fixed-axis-name.woff2");
   font-family: 'GradeGX';
   font-style: normal; }
 
