@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "hexo server",
     "build": "hexo clean && hexo generate",
+    "build:github": "hexo clean && hexo generate --config _config.yml,_config-gh-pages.yml",
     "start": "npm run build && node server.js"
   },
   "hexo": {
